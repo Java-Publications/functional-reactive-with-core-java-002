@@ -33,10 +33,10 @@ public class Main {
 
     Optional<Integer> apply = service().doWork("1");
 
-    final Integer intA = apply.get();
-
-    if (intA != null) {
+    if (apply.isPresent()) {
       //do something usefull
+      final Integer intA = apply.get();
+
     }
     else {
       //do something ???

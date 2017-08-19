@@ -3,7 +3,6 @@ package org.rapidpm.frp.v007;
 
 import java.util.Optional;
 import java.util.function.Function;
-import java.util.stream.Stream;
 
 /**
  *
@@ -36,7 +35,7 @@ public class Main {
         .or(() -> Optional.of(0))  // per definition
         .map((Function<Integer, Function<Integer, String>>) integer -> (valueToAdd) -> integer + valueToAdd + " was calculated")
         .ifPresentOrElse(
-            fkt -> System.out.println("f(10) ==> = " + fkt.apply(10)),
+            fkt -> System.out.println("f(10) ==> = " + fkt.apply(10)) ,
             () -> System.out.println("value not present (usless here)"));
   }
 }
